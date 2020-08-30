@@ -1,0 +1,10 @@
+%button{
+    border-radius: 4rem;
+    font-weight: bold;
+    cursor: pointer;
+    &:focus{
+        
+        outline: 0;
+        box-shadow: none;
+    }
+}

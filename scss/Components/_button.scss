@@ -1,0 +1,30 @@
+.btn-vehicle{
+    @extend %button;
+    @include styleButton($font-size-7, $color-white-0, $color-blue-200, $color-blue-200, $pd-1, $pd-5);
+    @include hoverButton($color-blue-100, $color-white-0);
+}
+
+.btn-vehicle-active{
+    @extend %button;
+    @include styleButton($font-size-7, $color-blue-200, $color-white-0,$color-blue-200, $pd-1, $pd-5);
+    @include hoverButton($color-white-0, $color-blue-200);
+}
+
+.btn-carousel{
+    @extend %button;
+    @include styleButton($font-size-7, $color-white-0, $color-orange, $color-orange, $pd-1, $pd-2);
+    @include hoverButton($color-orange, $color-white-0);
+}
+
+.btn-build{
+    @extend %button;
+    @include styleButton($font-size-7, $color-white-0, transparent, $color-white-0, $pd-1, $pd-5);
+    @include hoverButton($color-blue-100, $color-white-0);
+}
+
+.btn-go{
+    @extend %button;
+    @include styleButton($font-size-7, $color-white-0, $color-blue-200, $color-blue-200, $pd-1, $pd-2);
+    // @include hoverButton($color-blue-200, $color-white-0);
+}
+

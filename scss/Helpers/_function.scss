@@ -1,0 +1,32 @@
+@each $stt,$bg-color in (1, #3D4D5C) (2, #696969) (3, #1A459D) (4, #C1BBB6){
+     #img-#{$stt}{
+         background-image: linear-gradient(#bbbdc0,$color-grey,$color-grey);
+     }
+     .vehicle-product:hover > #img-#{$stt}{
+        background-image: linear-gradient($bg-color,$color-grey,$color-grey);
+     }
+     
+}
+
+@for $i from 1 through 6 {
+    .delay-#{$i}{
+        animation-delay: 0.15s * $i !important;
+    }
+}
+
+@each $stt,$img in (1,item-1) (2,item-2) (3,item-3) (4,item-4) {
+    .function-item-#{$stt}{
+         background-image: url('../img/#{$img}.jpg');
+         background-size: cover;
+         background-position: center;
+    }
+}
+
+@for $i from 1 through 5 {
+    .discover-item-#{$i}{
+        background-image: url('../img/discover-#{$i}.jpg');
+        background-size: 120%;
+        background-position: center 0;
+        background-repeat: no-repeat;
+    }
+}

@@ -1,0 +1,154 @@
+.navbar {
+    padding: 0;
+}
+#navbar-menu-2{
+    background-color: $color-blue-100;
+    padding: $pd-3;
+    a{
+        color:$color-white-0;
+    }
+}
+header {
+    background-color: $color-blue-100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 102;
+    a {
+        color:$color-white-0;
+        padding: $pd-3 $pd-4;
+        border-right: $border-1;
+        border-left: $border-1;
+        font-size: 1.68rem;
+        
+        &:hover {
+            text-decoration: none !important;
+            color: $color-white-0;
+        }
+    }
+
+    .navbar-toggler{
+        margin-right: 10px;
+        color: $color-white-0;
+        i{
+            font-size: 30px;
+            cursor: pointer;
+        }
+    }
+
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                color: $color-white-0;
+                padding: $pd-3 $pd-4;
+                border-right: $border-1;
+                border-left: $border-1;
+            }
+        }
+    }
+
+    .vehicles-link{
+        text-transform: uppercase;
+    }
+
+    .navbar > a:first-child {
+        padding: 0;
+        border: 0;
+        padding: 0 $pd-4;
+        margin: 0;
+    }
+
+    .navbar > a.active {
+        color: $color-blue-100;
+        background-color: $color-white-0;
+    }
+
+    //Search area
+    .search-area {
+        background-color: $color-grey;
+        padding: $pd-1 $pd-6;
+        position: relative;
+        &::before{
+            content: '';
+            width: 30px;
+            height: 30px;
+            border: 0;
+            background-color: red;
+            position: absolute;
+            top: -12px;
+            right: 1%;
+            transform: rotate(135deg);
+            background-color: $color-grey;
+        }
+        i {
+            font-size: $font-size-1;
+            color: $color-blue-200;
+            margin-right: $mg-1;
+            transform: translateY(2px);
+            position: absolute;
+            top: 22px;
+            left: 2%;
+        }
+        button{
+            margin-bottom: 10px;
+        }
+        input{
+            width: 80%;
+            height: $font-size-8;
+            background-color: transparent;
+            border: 0;
+            outline: 0;
+            font-weight: $font-weight-300;
+            font-size:$font-size-3;
+            color: $color-blue-200;
+            
+            &:focus{
+                outline: 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px){
+       .navbar{
+           justify-content: start;
+           a{
+               padding: 10px 15px;
+           }
+           
+       }
+       .vehicles-link{
+           text-transform: capitalize;
+       }
+       
+       .dealers-link{
+        border-right: $border-1!important;
+        border-left: $border-1!important;
+        margin-right: auto;
+        i{
+            display: block;
+            text-align: center;
+        }
+       }
+       .search-area{
+           input{
+               width: 100%;
+           }
+       }
+    }
+    @media screen and (max-width: 992px){
+        #language{
+            border: none!important;
+        }
+    }
+    
+}
+@media screen and (max-width: 768px){
+    .search-area{
+        &::before{
+            display: none;
+        }
+    }
+}
+
+

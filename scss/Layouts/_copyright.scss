@@ -1,0 +1,49 @@
+.copyright{
+    padding: 15px $pd-8;
+    background-color: $color-blue-100;
+    p{
+        @include styleText($font-size-7, normal, 12px);
+        color: $color-white-0;
+        a{
+            font-size: $font-size-7;
+            color: $color-white-0;
+            text-decoration: underline;
+        }
+    }
+    ul{
+        justify-content: flex-end;
+        li{
+            padding: 0 15px;
+            border-right: 1px solid $color-white-0;
+            
+            a{
+                font-size: $font-size-7;
+            color: $color-white-0;
+            }
+        }
+    }
+    &-logo{
+        justify-content: space-around;
+        margin-top: $mg-3;
+        img{
+            height: 44px;
+        }
+    }
+    @media screen and (max-width: 767px){
+        ul{
+            justify-content:center;
+            li:last-child{
+                border: 0;
+            }
+        }
+        &-logo{
+            img{
+                display: none;
+                &.copyright-honda-logo{
+                    display: block;
+                }
+            }
+        }
+    }
+    
+}

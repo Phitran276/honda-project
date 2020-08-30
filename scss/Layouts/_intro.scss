@@ -1,0 +1,94 @@
+.intro{
+    // margin-top: $mg-up-3;
+    height: 150px;
+    background-color: $color-grey;
+    &-container{
+        padding: 0 $pd-8;
+        .intro-left, .intro-right{
+            height: 400px;
+            position: relative;
+            margin-top: $mg-up-3;
+        }
+        .intro-left{
+            background-color: $color-black;
+            background-image: url('../img/our-vehicle-intro-1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+            &-content{
+                  color: $color-white-0;
+                  position: absolute;
+                  bottom: 10%;
+                  font-size: $font-size-7;
+                  text-align: center;
+                  h4{
+                      font-size: $font-size-1;
+                      font-weight: $font-weight-bold;
+                      margin-bottom: $mg-2;
+                  }
+                  p{
+                      font-weight: 300;
+                      margin-bottom: $mg-3;
+                  }
+            }
+        }
+        .intro-right{
+            background-image: url(../img/our-vehicles-intro-2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: $color-white-0;
+            &-content{
+                width: 40%;
+                font-size: $font-size-1;
+                position: absolute;
+                bottom: 10%;
+                left: 5%;
+                p{
+                    font-weight: bold;
+                    margin-bottom: 30px;
+                }
+                h4{
+                    padding: $pd-1 $pd-2;
+                    margin-bottom: $mg-2;
+                    font-size: $font-size-1;
+                    font-weight: $font-weight-bold;
+                    background-color: $color-blue-overlay;
+                    width: fit-content;
+                }
+            }
+        }
+        .btn-vehicle, .btn-vehicle-active{
+            padding: $pd-1 $pd-2;
+        }
+        .btn-vehicle:hover{
+            color: $color-blue-100;
+            background: transparent;
+        }
+        .btn-vehicle-active{
+            color: $color-white-0;
+            border-color: $color-white-0;
+            background-color: transparent;
+            &:hover{
+                color: $color-blue-100;
+                background-color: $color-white-0;
+                border-color: $color-white-0;
+
+            }
+        }
+    }
+    @media screen and (max-width: 992px){
+        &-container{
+            .intro-left{
+                margin-bottom: $mg-3;
+            }
+        }
+    }
+    @media screen and (max-width: 768px){
+        height: fit-content;
+        .intro-right{
+            margin-top: 0;
+        }
+    }
+}

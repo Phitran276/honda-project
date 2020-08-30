@@ -1,0 +1,103 @@
+.discover{
+    padding: 0 $pd-8;
+    text-align: center;
+    h1{
+      font-size: 6.6rem;
+      font-weight: $font-weight-300;
+    }
+    p{
+        font-size: $font-size-7;
+        font-weight: $font-weight-300;
+    }
+    .col-md-4{
+         padding: $pd-1;
+    }
+    .discover-item{
+        height: 450px;
+        background-color: $color-white-0;
+        position: relative;
+        box-shadow: $box-shadow-2;
+        margin-top: 20px;
+        &-content{
+            position: absolute;
+            left: 0;
+            bottom: 10%;
+            h2{
+                @include styleText($font-size-1, bold, $mg-2);
+            }
+            p{
+                @include styleText($font-size-7, 300, $mg-2);
+                padding: 0 $pd-3;
+            }
+            a{
+                color: $color-blue-200;
+                @include styleText($font-size-7, bold, 0);
+            }
+        }
+    }
+    .discover-item-twitter{
+        & > i{
+            font-size: $font-size-3;
+            color: $color-blue-200;
+            position: absolute;
+            top: 12px;
+            right: 12px;
+        }
+        .twitter-content{
+            text-align: left;
+            position: absolute;
+            top: 30%;
+            left: 5%;
+            
+            &-logo{
+                display: flex;
+                img{
+                    border-radius: 6px;
+                    margin-right: 5px;
+                }
+                a{
+                    font-size: $font-size-7;
+                    display: block;
+                    color: $color-blue-200;
+                }
+                a:nth-of-type(1){
+                     font-weight: bold;
+
+                }
+            }
+            p{
+                font-size: $font-size-7;
+                margin: 12px 0;
+                font-weight: normal;
+                a{
+                    color: $color-blue-200;
+                    &:hover{
+                        color: $color-blue-200; 
+                    }
+                }
+            }
+            & > a{
+                display: block;
+                color: $color-blue-200;
+                font-size: $font-size-7;
+                margin-bottom: 12px;
+            }
+            &-interaction{
+                font-size: $font-size-7;
+                color: $color-blue-200;
+                span{
+                    margin-right: $mg-2;
+                }
+            }
+            
+        }
+    }
+    .discover-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button{
+            margin: 45px 0;
+        }
+    }
+}
